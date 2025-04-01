@@ -1,9 +1,7 @@
 from django.urls import path
-import apps
-import views
-
-store_name = apps.StoreConfig.name
+from . import views
 
 urlpatterns = [
-    path('', views.home, name='home')
+    path('', views.home, name='home'),
+    path('contacts/', views.contacts, name='contacts')
 ]
